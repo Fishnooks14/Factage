@@ -6,6 +6,7 @@ should prolly add an actual description of what it does cuz rn this is all meani
 - `0-9` are integer values.
 - `a-z` and `A-Z` are characters.
 - `"` is space-bar.
+- `\` is a new-line (`\n`) character.
 - `;` ends the program when attempting to output to console.
 ### Arithmetic
 #### Binary Operators
