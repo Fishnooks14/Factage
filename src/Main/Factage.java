@@ -5,15 +5,16 @@ import Symbols.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.File;
 import java.util.ArrayList;
 
 public class Factage {
     private final Square[][] program;
     private boolean active;
 
-    public Factage() throws IOException {
+    public Factage(File f) throws IOException {
         active = true;
-        BufferedReader reader = new BufferedReader(new FileReader("src\\program.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader(f));
 
         ArrayList<String> rawProgram = new ArrayList<>();
         int maxLineLen = 0;
