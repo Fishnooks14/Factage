@@ -26,6 +26,9 @@ public class Factage {
         reader.close();
         program = new Square[rawProgram.size()][maxLineLen];
 
+        if (maxLineLen == 0)
+            throw new IllegalArgumentException("Program must contain text.");
+
         boolean hasPrinter = false;
         for (int i = 0; i < rawProgram.size(); i++) {
             for (int j = 0; j < maxLineLen; j++) {

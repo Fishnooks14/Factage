@@ -8,7 +8,7 @@ public class Duplicate extends Square {
 
     public Duplicate(Factage program, int y, int x) {
         super(program, y, x);
-        assignDynType(new DynType(null));
+        assignDynType(new DynType<Object>(null));
     }
 
     @Override

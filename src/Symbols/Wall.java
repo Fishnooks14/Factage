@@ -9,7 +9,7 @@ public class Wall extends Square {
 
     public Wall(Factage program, int y, int x) {
         super(program, y, x);
-        assignDynType(new DynType(null));
+        assignDynType(new DynType<Object>(null));
     }
 
     @Override

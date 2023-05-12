@@ -1,17 +1,15 @@
-import Main.Factage;
-
 import java.io.File;
 import java.io.IOException;
 
-public class Interpreter {
+public class Factage {
     public static void main(String[] args) throws IOException {
         if (args.length == 0) {
             System.out.println("Please specify a file name");
-            System.out.println("Example: java Main program.txt");
+            System.out.println("Example: java Factage program.txt");
             return;
         }
+        Main.Factage test = new Main.Factage(new File(args[0]));
         final long startTime = System.nanoTime();
-        Factage test = new Factage(new File(args[0]));
         while (test.getActive()) {
             test.updateProgram();
         }

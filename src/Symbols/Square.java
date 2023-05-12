@@ -6,7 +6,7 @@ import Main.Factage;
 public abstract class Square {
     protected final int y;
     protected final int x;
-    protected Factage program;
+    protected final Factage program;
     protected DynType dynType;
 
     public Square(Factage program, int y, int x) {
