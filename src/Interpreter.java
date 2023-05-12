@@ -7,7 +7,7 @@ public class Interpreter {
     public static void main(String[] args) throws IOException {
         if (args.length == 0) {
             System.out.println("Please specify a file name");
-            System.out.println("Example: java Main program.txt");
+            System.out.println("Example: java Interpreter program.txt");
             return;
         }
         final long startTime = System.nanoTime();
