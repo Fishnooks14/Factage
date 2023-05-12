@@ -19,7 +19,7 @@ public class RightConveyor extends Square {
             return;
         }
 
-        if(x == programArray[y].length - 1)
+        if (x == programArray[y].length - 1)
             this.assignDynType(null);
         else {
             shiftSquare(programArray[y][x + 1], updated);

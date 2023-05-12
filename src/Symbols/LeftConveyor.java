@@ -19,7 +19,7 @@ public class LeftConveyor extends Square {
             return;
         }
 
-        if(x == 0)
+        if (x == 0)
             this.assignDynType(null);
         else {
             shiftSquare(programArray[y][x - 1], updated);

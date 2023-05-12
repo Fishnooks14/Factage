@@ -41,15 +41,14 @@ public abstract class Square {
     }
 
     protected void shiftSquare(Square dest, boolean[][] updated) {
-        if(dest.getDynType() == null) {
+        if (dest.getDynType() == null) {
             dest.assignDynType(dynType);
             this.assignDynType(null);
             updated[dest.getY()][dest.getX()] = true;
-        }
-        else if (!dest.isUpdated(updated)){
+        } else if (!dest.isUpdated(updated)) {
             updated[getY()][getX()] = true;
             dest.checkUpdates(updated);
-            if(dest.getDynType() == null) {
+            if (dest.getDynType() == null) {
                 dest.assignDynType(dynType);
                 this.assignDynType(null);
                 updated[dest.getY()][dest.getX()] = true;
@@ -58,14 +57,13 @@ public abstract class Square {
     }
 
     protected void shiftSquare(Square dest, DynType dt, boolean[][] updated) {
-        if(dest.getDynType() == null) {
+        if (dest.getDynType() == null) {
             dest.assignDynType(dt);
             updated[dest.getY()][dest.getX()] = true;
-        }
-        else if (!dest.isUpdated(updated)){
+        } else if (!dest.isUpdated(updated)) {
             updated[getY()][getX()] = true; // ?
             dest.checkUpdates(updated);
-            if(dest.getDynType() == null) {
+            if (dest.getDynType() == null) {
                 dest.assignDynType(dt);
                 updated[dest.getY()][dest.getX()] = true;
             }
@@ -74,16 +72,16 @@ public abstract class Square {
 
     public void checkUpdates(boolean[][] updated) {
         Square[][] programArray = program.getProgramArray();
-        for(int yInc = -1; yInc <= 1; yInc++) {
-            for(int xInc = -1; xInc <= 1; xInc++) {
-                if(y + yInc >= 0 && y + yInc < programArray.length && x + xInc >= 0 && x + xInc < programArray[y].length) {
-                    if(programArray[y + yInc][x + xInc].isOperator() && !programArray[y + yInc][x + xInc].isUpdated(updated)) {
+        for (int yInc = -1; yInc <= 1; yInc++) {
+            for (int xInc = -1; xInc <= 1; xInc++) {
+                if (y + yInc >= 0 && y + yInc < programArray.length && x + xInc >= 0 && x + xInc < programArray[y].length) {
+                    if (programArray[y + yInc][x + xInc].isOperator() && !programArray[y + yInc][x + xInc].isUpdated(updated)) {
                         programArray[y + yInc][x + xInc].updateSquare(updated);
                     }
                 }
             }
         }
-        if(!updated[y][x])
+        if (!updated[y][x])
             updateSquare(updated);
     }
 

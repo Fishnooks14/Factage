@@ -15,9 +15,9 @@ public class Printer extends Square {
         if (dynType != null)
             if (dynType.getIcon() == ';')
                 program.setActive(false);
-            else if(dynType.getIcon() == '\\')
+            else if (dynType.getIcon() == '\\')
                 System.out.println();
-            else if(dynType.getIcon() == '\"')
+            else if (dynType.getIcon() == '\"')
                 System.out.print(' ');
             else
                 System.out.print(dynType.value());
@@ -29,7 +29,7 @@ public class Printer extends Square {
             return;
         }
 
-        if(y == programArray.length - 1)
+        if (y == programArray.length - 1)
             this.assignDynType(null);
         else {
             shiftSquare(programArray[y + 1][x], updated);

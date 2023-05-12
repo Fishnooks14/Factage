@@ -2,7 +2,7 @@ package Symbols;
 
 import Main.Factage;
 
-public class SuperLeftConveyor extends Square{
+public class SuperLeftConveyor extends Square {
     public static final char icon = '[';
 
     public SuperLeftConveyor(Factage program, int y, int x) {
@@ -18,7 +18,7 @@ public class SuperLeftConveyor extends Square{
             return;
         }
 
-        if(x <= 1)
+        if (x <= 1)
             this.assignDynType(null);
         else {
             shiftSquare(programArray[y][x - 2], updated);

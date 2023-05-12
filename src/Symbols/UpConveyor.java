@@ -19,7 +19,7 @@ public class UpConveyor extends Square {
             return;
         }
 
-        if(y == 0)
+        if (y == 0)
             this.assignDynType(null);
         else {
             shiftSquare(programArray[y - 1][x], updated);

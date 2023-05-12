@@ -17,18 +17,15 @@ public class Inversion extends Square {
         Square[][] programArray = program.getProgramArray();
         updated[y][x] = true;
 
-        if(x == 0 || x == programArray[y].length - 1) {
-            System.out.println("hi");
+        if (x == 0 || x == programArray[y].length - 1) {
             return;
         }
 
-        if(programArray[y][x - 1].isOperable() && !updated[y][x - 1]) {
-            // duplicate from left to right
-            int out = programArray[y][x - 1].getDynType().getOperableValue() == 0 ? 1:0;
+        if (programArray[y][x - 1].isOperable() && !updated[y][x - 1]) {
+            int out = programArray[y][x - 1].getDynType().getOperableValue() == 0 ? 1 : 0;
             DynType<Integer> dt = new DynType<>(out);
             shiftSquare(programArray[y][x + 1], dt, updated);
             programArray[y][x - 1].assignDynType(null);
-            // updated[y][x + 1] = false;
         }
     }
 

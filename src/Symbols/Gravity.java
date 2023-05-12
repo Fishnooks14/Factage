@@ -19,7 +19,7 @@ public class Gravity extends Square {
             return;
         }
 
-        if(y == programArray.length - 1)
+        if (y == programArray.length - 1)
             this.assignDynType(null);
         else {
             shiftSquare(programArray[y + 1][x], updated);

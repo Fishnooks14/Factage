@@ -3,9 +3,9 @@ package Main;
 import Symbols.*;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.File;
 import java.util.ArrayList;
 
 public class Factage {
@@ -68,8 +68,8 @@ public class Factage {
                     }
                 }
 
-                if(symbol == '@')
-                    if(hasPrinter)
+                if (symbol == '@')
+                    if (hasPrinter)
                         throw new IllegalArgumentException("Your program may only have one printer('@').");
                     else
                         hasPrinter = true;

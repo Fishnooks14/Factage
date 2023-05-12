@@ -16,11 +16,11 @@ public class Duplicate extends Square {
         Square[][] programArray = program.getProgramArray();
         updated[y][x] = true;
 
-        if(x == 0 || x == programArray[y].length - 1) {
+        if (x == 0 || x == programArray[y].length - 1) {
             return;
         }
 
-        if(programArray[y][x - 1].isOperable() && !updated[y][x - 1]) {
+        if (programArray[y][x - 1].isOperable() && !updated[y][x - 1]) {
             // duplicate from left to right
             DynType dt = programArray[y][x - 1].getDynType();
             shiftSquare(programArray[y][x + 1], dt, updated);
