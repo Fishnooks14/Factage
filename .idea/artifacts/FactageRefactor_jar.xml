@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="FactageRefactor:jar">
-    <output-path>$USER_HOME$/Desktop</output-path>
-    <root id="archive" name="FactageRefactor.jar">
-      <element id="module-output" name="FactageRefactor" />
-    </root>
-  </artifact>
-</component>
