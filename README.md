@@ -39,3 +39,8 @@ All unary operators take the value directly to the left and outputs the result d
 - `@` outputs any values on it to the console. Does not delete the values. Can only have one `@` in the program.
 - `#` deletes any values on it.
 - `_` prevents values from going through it. Values can atop it without falling.
+## Interpreter
+To run a program, invoke the interpreter with the source code's file name as a command-line argument, e.g.
+```
+java Interpreter program.txt
+```
