@@ -42,5 +42,5 @@ All unary operators take the value directly to the left and outputs the result d
 ## Interpreter
 To run a program, invoke the interpreter with the source code's file name as a command-line argument, e.g.
 ```
-java Interpreter program.txt
+java Factage program.txt
 ```
